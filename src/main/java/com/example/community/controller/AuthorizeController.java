@@ -35,8 +35,9 @@ public class AuthorizeController {
        accessTokenDto.setClient_id(clientId);
        accessTokenDto.setClient_secret(clientSecret);
        accessTokenDto.setState(state);
-       String accessToken = githubProvider.getAccessToken(new AccessTokenDto());
+       String accessToken = githubProvider.getAccessToken(accessTokenDto);
        GithubUser user = githubProvider.getUser(accessToken);
+       //System.out.println(user.getName());
         if(user != null){
             //登录成功，写cookie和session
             request.getSession().setAttribute("user",user);
