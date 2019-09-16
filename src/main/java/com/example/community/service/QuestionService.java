@@ -54,4 +54,37 @@ public class QuestionService {
         paginationDto.setQuestions(questionDtoList);
         return paginationDto;
     }
+
+    public PaginationDto list(Integer userId, Integer page, Integer size) {
+        PaginationDto paginationDto = new PaginationDto();
+        Integer totalCount = questionMapper.countByUserId(userId);
+        paginationDto.setPagination(totalCount,page,size);
+
+        if (page < 1){
+            page = 1;
+        }
+
+        if(page > paginationDto.getTotalPage()){
+            page = paginationDto.getTotalPage();
+        }
+
+
+        Integer offset = size * (page - 1);
+        List<Question> questions = questionMapper.listByUserId(userId,offset,size);
+        List<QuestionDto> questionDtoList = new ArrayList<>();
+
+        for (Question question: questions) {
+            User user = userMapper.findById(question.getCreator());
+            QuestionDto questionDto = new QuestionDto();
+            //questionDto.setId(question.getId()); //古老方法
+            BeanUtils.copyProperties(question,questionDto); //spring内置方法
+            questionDto.setUser(user);
+            questionDtoList.add(questionDto);
+        }
+
+        paginationDto.setQuestions(questionDtoList);
+        return paginationDto;
+
+
+    }
 }
