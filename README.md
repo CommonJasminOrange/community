@@ -1,8 +1,8 @@
 ## Orange Community  
 
 ## 资料
-[Spring文档]https://spring.io/guides  
-[Spring Boot官方文档]https://docs.spring.io/spring-boot/docs/2.1.7.RELEASE/reference/html/boot-features-sql.html#boot-features-embedded-database-support  
+[Spring文档]https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html  
+[Spring Boot官方文档]https://docs.spring.io/spring-boot/docs/2.1.7.RELEASE/reference/html  
 [Spring web]https://spring.io/guides/gs/serving-web-content  
 [Thymelaf官方文档]https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html  
 [Es中文社区]https://elasticsearch.cn  
