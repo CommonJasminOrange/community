@@ -9,6 +9,7 @@
 [Github ssh key]https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent  
 [Bootstrap文档]https://v3.bootcss.com  
 [Github buding OAuth App]https://developer.github.com/apps/building-oauth-apps/  
+[Mybatis Generator]
 ## 工具
 [Git]https://git-scm.com/download/win  
 [Visual Paradigm]https://www.visual-paradigm.com  
@@ -24,3 +25,7 @@ ALT+INSERT：生成get/set 实现接口等
 Alt+回车：导入包，自动修正代码
 Ctrl+Alt+O：删除无效导入包
 Ctrl+N/Ctrl+Shift+N：搜索，定位
+
+## mvn
+mvn flyway:migrate
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate

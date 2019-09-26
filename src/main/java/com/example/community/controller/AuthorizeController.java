@@ -2,11 +2,9 @@ package com.example.community.controller;
 
 import com.example.community.dto.AccessTokenDto;
 import com.example.community.dto.GithubUser;
-import com.example.community.mapper.UserMapper;
 import com.example.community.model.User;
 import com.example.community.provider.GithubProvider;
 import com.example.community.service.UserService;
-import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
